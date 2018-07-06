@@ -1,3 +1,39 @@
 page-home {
 
 }
+ion-content{
+  
+    h1{
+        text-align: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background-color: cadetblue;
+    
+    }
+    h4{
+        text-align: center;
+        background-color: cadetblue;
+    }
+
+    // .miranda{
+    //     background-image: url(../../assets/imgs/back.png);
+    //     background-size: cover;
+    // }
+    
+    // .btnSubmit{
+    //     padding-left: 35%;
+    // }
+
+    ion-checkbox{
+     
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+      
+        transform: rotate(45deg);
+        
+    }
+    
+}

@@ -1,14 +1,298 @@
-<ion-header>
-  <ion-navbar>
+<!-- <ion-header>
+  <ion-navbar color="secondary">
     <ion-title>
-      Ionic Blank
+    Miranda QuizApp
     </ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <div *ngIf="front">
+
+      <div class="miranda">
+          <img src="../../assets/imgs/back.png" alt="miranda" >
+          
+      </div>
+<br>
+<br>
+
+
+      <h3>Answer the following Miranda quiz questions about movies, football and nature. Click start. Goodluck!!</h3>
+      <br>
+    <br>
+      <button ion-button (click)="onFootball()" style="margin-left: 35%;">Start</button>
+
+      <!-- <div class="miranda">
+          <img src="../../assets/imgs/back.png" alt="miranda" >
+          
+      </div> -->
+  </div>
+ 
+ 
+
+ 
+ <div class="footballs" *ngIf="Football">
+    <div class="miranda">
+        <img src="../../assets/imgs/miranda.png" alt="miranda">
+    </div>
+    <h1>Football</h1>
+   <p><label>Quistion 1: Which country is holding FiFa 2018 world cup?</label></p>
+      
+   <ion-item>
+        <ion-label>Mexico</ion-label>
+          <ion-checkbox [(ngModel)]= "mexico" ></ion-checkbox>
+      </ion-item>
+      <ion-item>
+          <ion-label>Russia</ion-label>
+            <ion-checkbox [(ngModel)]= "russia"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>France</ion-label>
+              <ion-checkbox [(ngModel)]= "france"></ion-checkbox>
+          </ion-item>
+   
+   <p><label>Quistion 2: Lionel Messi is playing for which club team</label></p>
+    <ion-item>
+      <ion-label>Manchester United </ion-label>
+        <ion-checkbox name="football" [(ngModel)]= "manunited"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+        <ion-label>Arsenal</ion-label>
+          <ion-checkbox name="football" [(ngModel)]= "arsenal"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+          <ion-label>Barcelona FC</ion-label>
+            <ion-checkbox name="football" [(ngModel)]= "barcelona"></ion-checkbox>
+        </ion-item>
+        <p><label>Quistion 3: The newly appointed head coach of Bloemfontein Celtic is? </label></p>
+        <ion-item>
+          <ion-label>Steve Kompela</ion-label>
+            <ion-checkbox name="football" [(ngModel)]= "steve"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Arsen Wenger</ion-label>
+              <ion-checkbox name="football" [(ngModel)]= "wenger"></ion-checkbox>
+          </ion-item>
+          <ion-item>
+              <ion-label>Eric Tinkler</ion-label>
+                <ion-checkbox name="football" [(ngModel)]= "tinkler"></ion-checkbox>
+            </ion-item>
+            <p><label>Quistion 4: How many men are on the field at one time per team? </label></p>
+        <ion-item>
+          <ion-label>14</ion-label>
+            <ion-checkbox [(ngModel)]= "fourteen"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label >11</ion-label>
+              <ion-checkbox [(ngModel)]= "eleven"></ion-checkbox>
+          </ion-item>
+          <ion-item>
+              <ion-label>8</ion-label>
+                <ion-checkbox [(ngModel)]= "eight"></ion-checkbox>
+            </ion-item>
+            <p><label>Quistion 5: Which African team get knocked out first in 2018 world cup? </label></p>
+        <ion-item>
+          <ion-label>Egypt</ion-label>
+            <ion-checkbox [(ngModel)]= "egypt"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Senegal</ion-label>
+              <ion-checkbox [(ngModel)]= "senegal"></ion-checkbox>
+          </ion-item>
+          <ion-item>
+              <ion-label>Tunisia</ion-label>
+                <ion-checkbox [(ngModel)]= "tunisia"></ion-checkbox>
+            </ion-item>
+            <button ion-button (click)="onNatures()" style="margin-left: 35%;">Next</button>
+ </div>
+
+ <div class="Nature" *ngIf="Natures">
+    <div class="miranda">
+        <img src="../../assets/imgs/miranda.png" alt="miranda">
+    </div>
+  <h1>Nature</h1>
+    <ion-item>
+        <ion-label>Quistion1 : The national flower of Italy is? </ion-label>
+        <ion-select [(ngModel)]= "flower">
+          
+          <ion-option>Pertunia</ion-option>
+          <ion-option>Narciccus</ion-option>
+          <ion-option>Lily</ion-option>
+        </ion-select>
+        
+    </ion-item>
+    <ion-item>
+        <ion-label>Quistion2 : The coldest place in the world is </ion-label>
+        <ion-select [(ngModel)]= "coldest">
+          
+          <ion-option>Verkoyansk in Siberia</ion-option>
+          <ion-option>Atlantic</ion-option>
+          <ion-option>England</ion-option>
+        </ion-select>
+        
+    </ion-item>
+    <ion-item>
+        <ion-label>Quistion3 : The biggest island in the world is? </ion-label>
+        <ion-select [(ngModel)]= "island">
+          
+          <ion-option>Hawaii</ion-option>
+          <ion-option>Irland</ion-option>
+          <ion-option>GreenLand</ion-option>
+        </ion-select>
+        
+    </ion-item>
+    <ion-item>
+        <ion-label>Quistion4 : The largest ocean of the world is? </ion-label>
+        <ion-select [(ngModel)]= "ocean">
+          
+          <ion-option>Pacific ocean</ion-option>
+          <ion-option>Indian ocean</ion-option>
+          <ion-option>Arctic ocean</ion-option>
+        </ion-select>
+        
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Quistion5 : Largest tree in the world is? </ion-label>
+        <ion-select [(ngModel)]= "tree">
+          
+          <ion-option>Sequoia</ion-option>
+          <ion-option>Baobab</ion-option>
+          <ion-option>Hyperion tree</ion-option>
+        </ion-select>
+        
+    </ion-item>
+    <div>
+    <button ion-button (click)="onBackFT()" style="margin-left: 30%;">Back</button>
+    <button ion-button (click)="onMovie()" >Next</button>  
+  </div>
+  </div>
+
+
+<div class="Movies"  *ngIf="Movie">
+    <div class="miranda">
+        <img src="../../assets/imgs/miranda.png" alt="miranda">
+    </div>
+  <h1>Movies</h1>
+    <p><label>Quistion1 : Who starred as the Tarzan in the first movie?</label></p>
+    <ion-list radio-group [(ngModel)]= "tarzan" name="tarzan" required >
+    <ion-item>
+      <ion-label>Gomez Swifter</ion-label>
+        <ion-radio value="Gomez" ></ion-radio>
+    </ion-item>
+    <ion-item>
+        <ion-label>Peter Pan</ion-label>
+        <ion-radio value="Peter Pan"></ion-radio>
+      </ion-item>
+      <ion-item>
+          <ion-label>John Kane</ion-label>
+          <ion-radio value="John" ></ion-radio>
+        </ion-item>
+      </ion-list>
+
+      
+        <p><label>Quistion2 : What colour are Mickey Mouse’s shoes?</label></p>
+        <ion-list radio-group [(ngModel)]= "micky" required>
+        <ion-item>
+          <ion-label>Yellow</ion-label>
+          <ion-radio value="Yellow"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Black</ion-label>
+            <ion-radio value="Black" color="dark"></ion-radio>
+          </ion-item>
+          <ion-item>
+              <ion-label>Red</ion-label>
+              <ion-radio value="Red" color="danger"></ion-radio>
+            </ion-item>
+          </ion-list>
+
+          
+            <p><label>Quistion3 : What type of fish is Dory from the 2003 movie 'Finding Nemo'?</label></p>
+            <ion-list radio-group [(ngModel)]= "dory" required>
+            <ion-item>
+              <ion-label>Sardines fish</ion-label>
+              <ion-radio value="Sardines fish"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>Star fish</ion-label>
+                <ion-radio value="Star fish"></ion-radio>
+              </ion-item>
+              <ion-item>
+                  <ion-label>Blue tang Fish</ion-label>
+                  <ion-radio value="Blue tang Fish"></ion-radio>
+                </ion-item>
+              </ion-list>
+
+           
+                <p><label>Quistion4 : What was the name of the boy in the Jungle Book?</label></p>
+                <ion-list radio-group [(ngModel)]= "jungle" required>
+                <ion-item>
+                  <ion-label>Mowgli</ion-label>
+                  <ion-radio value="Mowgli"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Harry porter</ion-label>
+                    <ion-radio value="Harry porter"></ion-radio>
+                  </ion-item>
+                  <ion-item>
+                      <ion-label>Micheal</ion-label>
+                      <ion-radio value="Micheal"></ion-radio>
+                    </ion-item>
+                  </ion-list>
+
+                  
+                    <p><label>Quistion5 : Which movie was played on 2018 valentines day?</label></p>
+                    <ion-list radio-group [(ngModel)]= "valentine" required>
+                    <ion-item>
+                      <ion-label>Black panther</ion-label>
+                      <ion-radio value="Black panther"></ion-radio>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>Fifty shades freed</ion-label>
+                        <ion-radio value="Fifty shades freed"></ion-radio>
+                      </ion-item>
+                      <ion-item>
+                          <ion-label>Three Idiots</ion-label>
+                          <ion-radio value="Three Idiots"></ion-radio>
+                        </ion-item>
+                      </ion-list>
+
+                      <div class="btnSubmit">
+                          <button ion-button (click)="onBackNT()" style="margin-left: 25%;">Back</button>
+                          <button ion-button (click)="onSubmit()">Submit</button>
+                       </div>
+</div>
+<div class="result" *ngIf="results">
+    <div class="miranda">
+        <img src="../../assets/imgs/miranda.png" alt="miranda">
+    </div>
+    <h3>Check out your score and the answer's you got right and wrong</h3>
+  <h4>Football</h4>
+<h6>Q1: {{mex}} </h6>
+<h6>Q2: {{ars}} </h6>
+<h6>Q3: {{stev}} </h6>
+<h6>Q4: {{elev}} </h6>
+<h6>Q5 {{sene}} </h6>
+
+<h4>Nature</h4>
+<h6>Q1: {{flower}}</h6>
+<h6>Q2: {{coldest}}</h6>
+<h6>Q3: {{island}}</h6>
+<h6>Q4: {{ocean}}</h6>
+<h6>Q5: {{tree}}</h6>
+
+<h4>Movies</h4>
+<h6>Q1: {{tarzan}}</h6>
+<h6>Q2: {{micky}}</h6>
+<h6>Q3: {{dory}}</h6>
+<h6>Q4: {{jungle}}</h6>
+<h6>Q5: {{valentine}}</h6>
+<h6> Score: {{count}} / 15 </h6>
+
+<button ion-button (click)="onOK()" style="margin-left: 35%;">OK</button>
+</div>
+
+
 </ion-content>
